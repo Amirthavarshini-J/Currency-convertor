@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    -webkit-user-drag: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(../pic3.jpg);
+    background-blend-mode: multiply, multiply,  normal;
+    filter: saturate(120%) ;
+}
+
+.wrapper{
+    background: #fff;
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+    border: 3px solid black;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.377);
+    color: black;
+}
+
+.wrapper header {
+    font-size: 28px;
+    text-align: center;
+}
+
+.wrapper form {
+    margin: 40px 0 20px 0;
+}
+
+form input, select {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+form .input_style {
+    border: 2px solid black;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    caret-color: black;
+    transition: .2s all ease;
+}
+
+.exchange_btn {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    background: black;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    box-shadow: 0 2px 4px -2px black;
+    transition: .2s ease-out;
+}
+
+.exchange_btn:hover {
+    background: black;
+    transform: scale(1.02);
+    box-shadow: 0 2px 4px -1px black;
+}
+
+.exchange_btn:active {
+    transform: scale(.90);
+}
+
+form p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input:focus{
+    border: 3px solid black;
+    box-shadow: 0 2px 4px -1px black;
+}
+
+form input:hover{
+    box-shadow: 0 2px 4px -2px black;
+}
+
+form .drop_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drop_list .select_box{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 45px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease;
+    cursor: pointer;
+}
+
+.drop_list .select_box:hover{
+    box-shadow: 0 2px 4px -2px black;
+}
+
+.select_box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+.select_box img{
+    max-width: 25px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.drop_list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+    color: black;
+}
+
+form .exchange_rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+.exchange_result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all;
+    margin-top: 30px;
+}
+
+select {
+    background: transparent;
+    user-select: none;
+    color: black;
+    text-shadow: 1px 0px 3px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Utilities */
+
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.money_loading{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.loading p {
+    margin-top: 20px;
+    color: black;
+}
+
+.error_text {
+    color: red;
+    font-size: 13px;
+    text-shadow: 0 1px 4px black;
+    user-select: none;
+}
+
+.error_text2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.error_text2 img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.error_text2 p{
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+::selection {
+    background: black;
+}
+
+.select_box select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_box select::-webkit-scrollbar-track {
+    background: white;
+}
+
+.select_box select::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 8px;
+    border-right: 2px solid white;
+}
+.select_box select::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+.github_corner{
+    position: absolute;
+    font-size: 22px;
+    top: 10px;
+    right: 20px;
+}
+
+.github_corner a {
+    color: black;
+    transition: .2s;
+}
+
+.github_corner:hover a{
+    color: black;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 650px) {
+    body {
+       
+        background-blend-mode: soft-light, screen, overlay, overlay,difference, overlay, normal;
+    }
+
+    .wrapper {
+        max-width: 340px;
+    }
+
+    .wrapper header {
+        font-size:21px !important;
+        white-space: nowrap;
+    }
+
+    form p {
+        font-size:14px !important;
+    }
+
+    .error_text {
+        font-size: 10px !important;
+    }
+    
+    .github_corner a {
+        color: #0C0252 !important;
+    }
+}
